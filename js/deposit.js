@@ -40,24 +40,3 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
 
 
 // 
-
-document.getElementById('btn-withdraw').addEventListener('click', function () {
-  const withdrawAmount = document.getElementById('withdraw-amount')
-  const newWithdrawFieldString = withdrawAmount.value
-  console.log(newWithdrawFieldString)
-  const newWithdrawField = parseFloat(newWithdrawFieldString);
-
-
-  const withdrawTotalElement = document.getElementById('withdraw-total');
-  const previousWithdrawTotalString = withdrawTotalElement.innerText
-  const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
-
-
-  const currentWithdrawTotal = previousWithdrawTotal + newWithdrawField;
-
-  withdrawTotalElement.innerText = currentWithdrawTotal;
-
-
-  // 
-  withdrawAmount.value = '';
-})
